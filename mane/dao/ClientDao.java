@@ -21,6 +21,7 @@ public class ClientDao {
         session.close();
     }
 
+
     public void update(Client client) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         Transaction tx1 = session.beginTransaction();

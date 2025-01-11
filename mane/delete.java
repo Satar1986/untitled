@@ -1,14 +1,13 @@
-import client.Client;
 import services.ClientService;
-
-import java.sql.SQLException;
-
 public class delete {
-    public static void main(String[] args) throws SQLException {
-
+    public static void main(String[] args) {
+try{
         ClientService clientService = new ClientService();
-
-        clientService.deleteClient(clientService.findClient(9));
+        clientService.deleteClient(clientService.findClient(23));}
+catch(Exception e){
+    System.out.println("Error: " + e);
+    e.printStackTrace();
+}
 
     }
 }

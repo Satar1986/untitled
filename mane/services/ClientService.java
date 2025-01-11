@@ -3,7 +3,7 @@ import dao.ClientDao;
 import client.Client;
 
 public class ClientService {
-    private static ClientDao clientDao = new ClientDao();
+    private final ClientDao clientDao = new ClientDao();
 
     public ClientService() {
     }
@@ -23,8 +23,8 @@ public class ClientService {
         clientDao.update(client);
     }
 
-
-
-
-
 }
+
+
+
+

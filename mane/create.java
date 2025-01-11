@@ -1,15 +1,15 @@
 import client.Client;
 import services.ClientService;
-
-import java.sql.SQLException;
-
 public class create {
-    public static void main(String[] args) throws SQLException {
-
+    public static void main(String[] args) {
+try {
         ClientService clientService = new ClientService();
-        Client client = new Client("Bob",41);
-
-        clientService.saveClient(client);
+        Client client = new Client("Lora",41);
+        clientService.saveClient(client);}
+catch (Exception e) {
+    System.out.println("Error: " + e);
+    e.printStackTrace();
+}
 
     }
 }

@@ -8,9 +8,11 @@ public class Client {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = true, updatable = true)
     private int id;
     @Column(name = "name")
     private String name;
+    @Column(name = "age")
     private int age;
     public Client() {
     }
