@@ -1,7 +1,7 @@
 package client;
 
 import javax.persistence.*;
-
+import java.util.List;
 @Entity
 @Table(name = "client")
 public class Client {
@@ -32,8 +32,9 @@ public class Client {
 
     public void setName(String name) {
         this.name = name;
-
     }
+
+
 
     public int getAge() {
         return age;

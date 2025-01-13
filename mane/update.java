@@ -4,7 +4,7 @@ public class update {
     public static void main(String[] args) {
 try{
         ClientService clientService = new ClientService();
-        Client client = clientService.findClient(24);
+        Client client = clientService.findClient(33);
         client.setName("John Doe");
         client.setAge(45);
         clientService.updateClient(client);}
