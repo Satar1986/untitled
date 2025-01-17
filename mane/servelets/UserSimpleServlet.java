@@ -27,7 +27,7 @@ public class UserSimpleServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         List<Client> client = clientService.findAllClients();
-        req.setAttribute("client",client);
+        req.setAttribute("Client",client);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/showClient.jsp");
         dispatcher.forward(req, resp);
 
@@ -41,7 +41,7 @@ public class UserSimpleServlet extends HttpServlet {
         int age = Integer.parseInt(req.getParameter("age"));
         Client client = new Client( name, age);
         clientService.saveClient(client);
-        resp.sendRedirect("/client");
+        resp.sendRedirect("/Client");
 
     }
 
@@ -52,13 +52,13 @@ public class UserSimpleServlet extends HttpServlet {
         client.setName(req.getParameter("name"));
         client.setAge(Integer.parseInt(req.getParameter("age")));
         clientService.updateClient(client);
-        resp.sendRedirect("/client");
+        resp.sendRedirect("/Client");
     }
 
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         int id = Integer.parseInt(req.getParameter("id"));
         clientService.deleteClient(clientService.findClient(id));
-        resp.sendRedirect("/client");
+        resp.sendRedirect("/Client");
     }
 }

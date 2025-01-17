@@ -4,7 +4,7 @@
     <title>Добавить нового пользователя</title>
 </head>
 <body>
-<form action = "/client" method="post">
+<form action ="/Client" method="post">
     <input required type="text" name="name" placeholder="Имя">
     <input required type="text" name="age" placeholder="Возраст">
     <input type="submit" value="Сохранить">

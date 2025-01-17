@@ -7,12 +7,13 @@
 <body>
 <table border="1">
     <tr>
-        <td>ID</td>
-        <td>Имя</td>
-        <td>Возраст</td>
-        <td>Действия</td>
+        <th>ID</th>
+        <th>Имя</th>
+        <th>Возраст</th>
+        <th>Действия</th>
     </tr>
-    <c:forEach items="${client}" var = "client">
+
+    <c:forEach var = "Client" items="${client}" >
         <tr>
             <td>${client.getId()}</td>
             <td>${client.getName()}</td>
@@ -27,7 +28,8 @@
                 <form action="deleteClient.jsp" method="post">
                     <input type="hidden" name="id" value="${client.getId()}">
                     <input type="submit" value="Удалить" style="float:left">
-                </form></td>
+                </form>\
+            </td>
         </tr>
     </c:forEach>
 </table>

@@ -7,7 +7,7 @@
 Если вы хотите начать работу с базой данных пользователей - <br>
 нажмите кнопку ниже:
 
-<form action = "client" method="get">
+<form action = "Client" method="get">
     <input type="submit" value="Начать работу с базой данных">
 </form>
 </body>

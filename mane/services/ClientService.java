@@ -5,7 +5,7 @@ import client.Client;
 import java.util.List;
 
 public class ClientService {
-    private final ClientDao clientDao = new ClientDao();
+    private ClientDao clientDao = new ClientDao();
 
     public ClientService() {
     }
